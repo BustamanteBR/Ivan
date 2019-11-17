@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Exercicio 4 - TP 3</title>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="../tp1/tp1.html">TP1</a></li>
+            <li><a href="../tp2/tp2.html">TP2</a></li>
+            <li><a href="tp3.html">TP3</a></li>
+            <li><a href="../index.html">Pagina Inicial</a></li>
+        </ul>   
+    </nav>
+
+    <script type="text/javascript">
+        var vet = [20];
+        var troca;
+
+        for (var x = 0; x < 20; x++){
+            vet[x] = parseInt(prompt("Digite um número:"));
+        }
+
+        for(var x = 20; x >= 0; x--){
+            for(var y = 0; y < 20; y++){
+                if(vet[y] >= vet[y+1]){
+                    troca = vet[y];
+                    vet[y] = vet[y+1];
+                    vet[y+1] = troca;
+                }
+            }
+        }
+
+        document.write("Lista em ordem crescente: " + "<br>");
+        for(var x = 0; x < 20; x++){
+            document.write(vet[x] + "<br>");
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
